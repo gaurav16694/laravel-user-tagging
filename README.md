@@ -42,7 +42,7 @@ $mention->notify();
 You can install this package via composer using this command:
 
 ```bash
-composer require jameslkingsley/laravel-mentions
+composer require gaurav16694/laravel-user-tagging
 ```
 
 **If you're using Laravel 5.5 or greater this package will be auto-discovered, however if you're using anything lower than 5.5 you will need to register it the old way:**
