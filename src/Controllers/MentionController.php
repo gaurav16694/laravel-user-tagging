@@ -14,19 +14,17 @@ class MentionController extends Controller
      */
     public function index(Request $request)
     {
-        $result_set = collect();
-
-        $pool = (object)config('mentions.pools.'.$request->p);
+               $resultSet = collect();
+        $pool = (object) config("mentions.pools.{$request->p}");
         $model = app()->make($pool->model);
-
-        $records = $model
-            ->where($pool->column, 'LIKE', "%$request->q%")
-            ->get([$model->getKeyName(), $pool->column])
-            ->each(function($record) use($request, &$result_set) {
+        $query = $model->where($pool->column, 'LIKE', "%$request->q%");
+        if ($filter = isset($pool->filter) ? $pool->filter : null) {
+            $query = $filter::handle($query);
+        }
+        $query->get([$model->getKeyName(), $pool->column])
+            ->each(function ($record) use ($request, &$resultSet) {
                 $record->pool = $request->p;
-                $result_set->push($record);
+                $resultSet->push($record);
             });
-
-        return response()->json($result_set);
-    }
+        return response()->json($resultSet);
 }

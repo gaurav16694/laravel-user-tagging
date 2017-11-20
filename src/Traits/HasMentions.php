@@ -21,8 +21,9 @@ trait HasMentions
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(array $attributes = [])
     {
+        parent::__construct($attributes);
         $this->mentionRepository = new MentionRepository($this);
     }
 
