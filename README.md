@@ -1,6 +1,8 @@
 # End-to-end Mentions in Laravel 5
 
-[![Build Status](https://travis-ci.org/jameslgaurav/laravel-mentions.svg?branch=master)](https://travis-ci.org/jameslgaurav/laravel-mentions)
+forked from  :- https://github.com/jameslkingsley/laravel-mentions
+
+Please visit for the awesome work :- https://github.com/jameslkingsley/laravel-mentions
 
 This Laravel >=5.4 package provides an easy way to setup mentions for Eloquent models. It provides the front-end for inserting mentions into **content-editable** elements, the back-end for associating mentions with models and lastly an elegant way to notify the mentioned models that they have been mentioned.
 
