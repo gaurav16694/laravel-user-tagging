@@ -28,3 +28,4 @@ class MentionController extends Controller
             });
         return response()->json($resultSet);
 }
+}

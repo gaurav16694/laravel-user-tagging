@@ -2,8 +2,13 @@
 
 forked from  :- https://github.com/jameslkingsley/laravel-mentions
 
-Please visit for the awesome work :- https://github.com/jameslkingsley/laravel-mentions
+Please visit  the awesome work :- https://github.com/jameslkingsley/laravel-mentions
 
+
+I have done changes to this package according to my needs please visit above link for awesome laravel mentions .
+
+
+<!---
 This Laravel >=5.4 package provides an easy way to setup mentions for Eloquent models. It provides the front-end for inserting mentions into **content-editable** elements, the back-end for associating mentions with models and lastly an elegant way to notify the mentioned models that they have been mentioned.
 
 Here are a few short examples of what you can do:
@@ -126,11 +131,11 @@ Now let's setup the form where we'll write a comment that has mentions:
 
 ```html
 <form method="post" action="{{ route('comments.store') }}">
-    <!-- This field is required, it stores the mention data -->
+     This field is required, it stores the mention data 
     <input type="hidden" name="mentions" id="mentions">
 
-    <!-- We write the comment in the div -->
-    <!-- The for attribute is a helper to auto-populate the textarea -->
+     We write the comment in the div 
+    <!-- The for attribute is a helper to auto-populate the textarea 
     <textarea class="hide" name="text" id="text"></textarea>
     <div class="has-mentions" contenteditable="true" for="#text"></div>
 
@@ -138,7 +143,7 @@ Now let's setup the form where we'll write a comment that has mentions:
         Post Comment
     </button>
 
-    <!-- CSRF field for Laravel -->
+    <!-- CSRF field for Laravel 
     {{ csrf_field() }}
 </form>
 ```
@@ -217,3 +222,4 @@ If you want to use notifications, here's some stuff you may need to know.
 - When a mention is notified, it will use Laravel's built-in Notification trait to make the notification. That means the model class defined in the pool's config must have the `Notifiable` trait.
 - It will use the notification class defined in the pool's config, so you can handle it differently for each one.
 - The data stored in the notification will always be the model that did the mention, for example `$comment->mention($user)` will store `$comment` in the data field.
+ -->

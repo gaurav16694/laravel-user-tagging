@@ -26,7 +26,7 @@ var Mentions = function () {
         key: 'template',
         value: function template(pool) {
             return function (item) {
-                return '<span class="mention-node" contenteditable="false" data-object="' + pool.pool + ':' + item.original[pool.reference] + '">' + (pool.trigger || '@') + item.original[pool.display] + '</span>';
+                return '<a href="'+item.original[pool.profile_url]+'"><span class="mention-node" contenteditable="false" data-object="' + pool.pool + ':' + item.original[pool.reference] + '">' + (pool.trigger || '@') + item.original[pool.display] + '</span></a>';
             };
         }
     }, {
@@ -43,7 +43,7 @@ var Mentions = function () {
                     }
                 };
 
-                xhttp.open('post', '/api/mentions?p=' + pool.pool + '&q=' + text, true);
+                xhttp.open('get', '/api/mentions?p=' + pool.pool + '&q=' + text, true);
                 xhttp.send();
             };
         }
