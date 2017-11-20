@@ -1,6 +1,6 @@
 # End-to-end Mentions in Laravel 5
 
-[![Build Status](https://travis-ci.org/jameslkingsley/laravel-mentions.svg?branch=master)](https://travis-ci.org/jameslkingsley/laravel-mentions)
+[![Build Status](https://travis-ci.org/jameslgaurav/laravel-mentions.svg?branch=master)](https://travis-ci.org/jameslgaurav/laravel-mentions)
 
 This Laravel >=5.4 package provides an easy way to setup mentions for Eloquent models. It provides the front-end for inserting mentions into **content-editable** elements, the back-end for associating mentions with models and lastly an elegant way to notify the mentioned models that they have been mentioned.
 
@@ -177,7 +177,7 @@ Now onto the back-end. Choose the model that you want to assign mentions to. In 
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Kingsley\Mentions\Traits\HasMentions;
+use gaurav\tagging\Traits\HasMentions;
 
 class Comment extends Model
 {
